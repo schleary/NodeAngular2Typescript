@@ -6,14 +6,16 @@ import {Component, View, bootstrap} from 'angular2/angular2';
   selector: 'my-app' // Defines the <my-app></my-app> tag
 })
 @View({
-  template: '<h1>Hello {{ name }}</h1>' // Defines the inline template for the component (can also be external)
+  template: '<h1>Hello {{ name }} grade {{ grade }}</h1>'// Defines the inline template for the component (can also be external)
   // To use an external template, specify a templateUrl property and give it the path to the HTML file.
 })
 // Component controller
 class MyAppComponent {
   name: string;
+  grade: number;
   constructor() {
     this.name = 'Alice';
+    this.grade = 1;
   }
 }
 
